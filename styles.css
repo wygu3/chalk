@@ -43,11 +43,14 @@ body, html {
     color: rgb(50, 50, 50);
     font-size: 16px;
     transition: 0.3s;
+    padding: 5px 10px; /* Add padding for better spacing */
 }
 
 .nav-links a.active {
-    background: rgba(182, 133, 153, 0.3); /* Highlight color for active link */
-    border-radius: 5px; /* Optional: add some rounding */
+    color: #b68599; /* Pink text color for active link */
+    font-weight: bold; /* Optional: make the text bold for emphasis */
+    background: rgba(182, 133, 153, 0.1); /* Lighter background for subtle highlight */
+    border-radius: 5px;
 }
 
 .nav-links a:hover {
