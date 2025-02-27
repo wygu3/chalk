@@ -2,7 +2,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -126,13 +126,13 @@ body, html {
 /* Portfolio Grid */
 .portfolio-grid {
     display: flex;
-    gap: 20px;
+    gap: 30px; /* Space between items */
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 .portfolio-item {
-    width: 30%;
+    width: calc(33.33% - 20px); /* Adjust width to account for gap */
     text-align: center;
 }
 
@@ -162,8 +162,134 @@ footer {
 }
 
 .team-photo {
-    width: 200px; /* Increased size for uniformity */
-    height: 200px; /* Set height to ensure both images are the same size */
-    object-fit: cover; /* Maintain aspect ratio and cover the area */
-    border-radius: 10px; /* Optional: add rounded corners */
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar {
+        width: 95%;
+        padding: 10px;
+        top: 15px;
+    }
+    
+    .navbar .logo img {
+        height: 40px;
+    }
+    
+    /* Mobile menu toggle */
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+    }
+    
+    .mobile-menu-toggle span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 3px;
+    }
+    
+    /* Hide regular nav links on mobile */
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 70%;
+        height: auto;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+    }
+    
+    .nav-links.active {
+        right: 5%;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    /* Hero section adjustments */
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .hero-text p {
+        font-size: 18px;
+    }
+    
+    /* Portfolio grid adjustments */
+    .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .portfolio-item {
+        width: calc(50% - 20px); /* Two items per row on medium screens */
+        margin-bottom: 20px;
+    }
+    
+    /* Team grid adjustments */
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .team-member {
+        margin-bottom: 20px;
+    }
+    
+    /* Section padding adjustments */
+    .section {
+        padding: 60px 15px;
+    }
+    
+    .nav-links a {
+        padding: 10px 15px;
+        display: block;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        display: inline-block;
+    }
+    
+    /* Increase spacing between elements */
+    .section h2 {
+        margin-bottom: 20px;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .hero-text p {
+        font-size: 16px;
+    }
+    
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+    
+    .portfolio-item {
+        width: 100%; /* Full width on small screens */
+    }
 }
