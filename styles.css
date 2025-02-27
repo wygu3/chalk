@@ -11,9 +11,10 @@ body, html {
     position: fixed;
     top: 30px; /* Adjusted offset from the top */
     width: 90%; /* Responsive width */
+    height: 60px;
     max-width: 1200px; /* Max width for larger screens */
     background: rgba(255, 255, 255, 1); /* Background color for the pill shape */
-    border-radius: 50px; /* Pill shape */
+    border-radius: 20px; /* Pill shape */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +26,7 @@ body, html {
 }
 
 .navbar .logo img {
-    height: 40px;
+    height: 50px; /* Increased height for the logo */
 }
 
 .nav-links {
@@ -146,4 +147,23 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+/* Team Section Styles */
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-photo {
+    width: 200px; /* Increased size for uniformity */
+    height: 200px; /* Set height to ensure both images are the same size */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 10px; /* Optional: add rounded corners */
 }
