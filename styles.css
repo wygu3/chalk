@@ -45,6 +45,11 @@ body, html {
     transition: 0.3s;
 }
 
+.nav-links a.active {
+    background: rgba(182, 133, 153, 0.3); /* Highlight color for active link */
+    border-radius: 5px; /* Optional: add some rounding */
+}
+
 .nav-links a:hover {
     color: #b68599;
 }
